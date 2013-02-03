@@ -95,20 +95,62 @@ var populateDB = function() {
         {
             name: "Building a new website for 2013",
             year: "2013-02-03T16:53:22.317Z",
-            grapes: "Grenache / Syrah",
-            country: "France",
-            region: "Southern Rhone",
-            description: "Recently I have started to build web apps using Javascript frameworks and so I decided to re-build my own site using a mixture of these technologies. If you take a glance at the footer of this site or the drop-down in the main navigation for resources, you will find a complete list of the technologies I have been using. I am also taking the brave step of making this site publicly available on GitHub. So if you give it a few months whilst it matures, who knows you may like it, find it useful and use it to kickstart your own web projects. Be my guest.",
-            picture: "saint_cosme.jpg"
+            summary: null,
+            description: "Recently I have started to build web apps using Javascript frameworks and so I decided to " +
+                "re-build my own site using a mixture of these technologies. If you take a glance at the footer of this " +
+                "site or the drop-down in the main navigation for resources, you will find a complete list of the " +
+                "technologies I have been using. I am also taking the brave step of making this site publicly " +
+                "available on GitHub. So if you give it a few months whilst it matures, who knows you may like it, " +
+                "find it useful and use it to kickstart your own web projects. Be my guest.",
+            picture: null
         },
         {
-            name: "LAN RIOJA CRIANZA",
-            year: "2006",
-            grapes: "Tempranillo",
-            country: "Spain",
-            region: "Rioja",
-            description: "A resurgence of interest in boutique vineyards has opened the door for this excellent foray into the dessert article market. Light and bouncy, with a hint of black truffle, this article will not fail to tickle the taste buds.",
-            picture: "lan_rioja.jpg"
+            name: "Building a new website for 2013",
+            year: "2013-02-03T16:53:22.317Z",
+            summary: null,
+            description: "Recently I have started to build web apps using Javascript frameworks and so I decided to " +
+                "re-build my own site using a mixture of these technologies. If you take a glance at the footer of this " +
+                "site or the drop-down in the main navigation for resources, you will find a complete list of the " +
+                "technologies I have been using. I am also taking the brave step of making this site publicly " +
+                "available on GitHub. So if you give it a few months whilst it matures, who knows you may like it, " +
+                "find it useful and use it to kickstart your own web projects. Be my guest.",
+            picture: null
+        },
+        {
+            name: "Building a new website for 2013",
+            year: "2013-02-03T16:53:22.317Z",
+            summary: null,
+            description: "Recently I have started to build web apps using Javascript frameworks and so I decided to " +
+                "re-build my own site using a mixture of these technologies. If you take a glance at the footer of this " +
+                "site or the drop-down in the main navigation for resources, you will find a complete list of the " +
+                "technologies I have been using. I am also taking the brave step of making this site publicly " +
+                "available on GitHub. So if you give it a few months whilst it matures, who knows you may like it, " +
+                "find it useful and use it to kickstart your own web projects. Be my guest.",
+            picture: null
+        },
+        {
+            name: "Building a new website for 2013",
+            year: "2013-02-03T16:53:22.317Z",
+            summary: null,
+            description: "Recently I have started to build web apps using Javascript frameworks and so I decided to " +
+                "re-build my own site using a mixture of these technologies. If you take a glance at the footer of this " +
+                "site or the drop-down in the main navigation for resources, you will find a complete list of the " +
+                "technologies I have been using. I am also taking the brave step of making this site publicly " +
+                "available on GitHub. So if you give it a few months whilst it matures, who knows you may like it, " +
+                "find it useful and use it to kickstart your own web projects. Be my guest.",
+            picture: null
+        },
+        {
+            name: "Building a new website for 2013",
+            year: "2013-02-03T16:53:22.317Z",
+            summary: null,
+            description: "Recently I have started to build web apps using Javascript frameworks and so I decided to " +
+                "re-build my own site using a mixture of these technologies. If you take a glance at the footer of this " +
+                "site or the drop-down in the main navigation for resources, you will find a complete list of the " +
+                "technologies I have been using. I am also taking the brave step of making this site publicly " +
+                "available on GitHub. So if you give it a few months whilst it matures, who knows you may like it, " +
+                "find it useful and use it to kickstart your own web projects. Be my guest.",
+            picture: null
         }];
 
     db.collection('articles', function(err, collection) {
