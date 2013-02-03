@@ -1,6 +1,1 @@
-nicklewis-net
-=============
-
-www.nicklewis.net website that will be available for other people to use
-
-change
+Nick Lewis Website based on Nodecellar and being adapted to form my own website, that will evolve over time with lots of Javascript framework goodness, backed by NodeJs!
