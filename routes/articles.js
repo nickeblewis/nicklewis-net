@@ -5,14 +5,14 @@ var Server = mongo.Server,
     BSON = mongo.BSONPure;
 
 var server = new Server('localhost', 27017, {auto_reconnect: true});
-db = new Db('articledb', server, {safe: true});
+db = new Db('nicklewis', server, {safe: true});
 
 db.open(function(err, db) {
     if(!err) {
-        console.log("Connected to 'articledb' database");
-        db.collection('articles', {safe:true}, function(err, collection) {
+        console.log("Connected to 'nicklewis' database");
+        db.collection('nicklewis', {safe:true}, function(err, collection) {
             if (err) {
-                console.log("The 'articles' collection doesn't exist. Creating it with sample data...");
+                console.log("The 'nicklewis' collection doesn't exist. Creating it with sample data...");
                 populateDB();
             }
         });
