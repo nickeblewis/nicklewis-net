@@ -1,3 +1,4 @@
+// TODO: Implement requireJs using define etc
 window.Article = Backbone.Model.extend({
 
     urlRoot: "/articles",
@@ -7,6 +8,7 @@ window.Article = Backbone.Model.extend({
     initialize: function () {
         this.validators = {};
 
+        // TODO: These validations will need to change
         this.validators.name = function (value) {
             return value.length > 0 ? {isValid: true} : {isValid: false, message: "You must enter a name"};
         };
