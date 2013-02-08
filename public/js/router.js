@@ -3,8 +3,8 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'views/home'
-], function($, _, Backbone, Session, HomeView){
+    'views/HomeView'
+], function($, _, Backbone, HomeView){
     var AppRouter = Backbone.Router.extend({
         routes: {
             ""                  : "home",
