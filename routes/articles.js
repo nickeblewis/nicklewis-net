@@ -158,4 +158,5 @@ var populateDB = function() {
         collection.insert(articles, {safe:true}, function(err, result) {});
     });
 
+    // TODO: We need to add collections for resume and other things
 };
