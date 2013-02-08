@@ -4,6 +4,7 @@ var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
 
+// TODO: Later we will need to change this to point to the remote DB server at MongoHQ
 var server = new Server('localhost', 27017, {auto_reconnect: true});
 db = new Db('nicklewis', server, {safe: true});
 
