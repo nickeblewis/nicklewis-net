@@ -58,6 +58,8 @@ define([
         }
     });
 
+    // TODO: Cut this out to new collections folder, see https://github.com/thomasdavis/backbonetutorials/blob/gh-pages/examples/modular-backbone/js/collections/projects/ProjectsCollection.js
+    
     var ArticleCollection = Backbone.Collection.extend({
     
         model: Article,
