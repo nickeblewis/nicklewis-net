@@ -1,6 +1,5 @@
-
-    <% _.each(articles, function(article) { %>
-        <h2><%= article.get('name') %></h2>
-        <p><%= article.get('description') %></p>
-
-    <% }); %>
+<% _.each(articles, function(article) { %>
+    <h2><%= article.get('name') %></h2>
+    <p><%= article.get('description') %></p>
+    <p><a href="articles/<%= article.get('_id') %>">Read more...</a></p>
+<% }); %>
