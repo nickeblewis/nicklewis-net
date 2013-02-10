@@ -1,4 +1,6 @@
 
-<% _.each(articles, function(article) { %>
-        <em><%= name %></em>
-<% }); %>
+    <% _.each(articles, function(article) { %>
+        <h2><%= article.get('name') %></h2>
+        <p><%= article.get('description') %></p>
+
+    <% }); %>
