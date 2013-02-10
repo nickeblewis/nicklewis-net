@@ -3,46 +3,55 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'views/HomeView'
-], function($, _, Backbone, HomeView){
+    'views/HeaderView',
+    'views/HomeView',
+    'views/AboutView',
+    'views/ArticleView',
+    'collections/Articles'
+], function($, _, Backbone, HeaderView, HomeView, AboutView, ArticleView, Articles){
     var AppRouter = Backbone.Router.extend({
         routes: {
             ""                  : "home",
-            "articles"	: "list",
+            "articles"	: "articles",
             "articles/page/:page"	: "list",
             "articles/add"         : "addArticle",
             "articles/:id"         : "articleDetails",
-            "about"             : "about"
+            "about"             : "about",
+
+            // Default
+            "*actions": "defaultRoute"
         }
     });
 
     var initialize = function() {
         var app_router = new AppRouter;
-        app_router.on('home', function(){
-//            if (!this.homeView) {
-//                this.homeView = new HomeView();
-//            }
-//            $('#content').html(this.homeView.el);
-//            this.headerView.selectMenuItem('home-menu');
 
+        var headerView = new HeaderView();
+        headerView.render();
+
+        app_router.on('route:home', function(actions){
             var homeView = new HomeView();
             homeView.render();
         });
-//        app_router.on('list', function(){
+
+        app_router.on('route:articles', function(page){
+            var articleView = new ArticleView();
+            articleView.render();
 //            var p = page ? parseInt(page, 10) : 1;
-//            var articleList = new ArticleCollection();
+//            var articleList = new Articles();
 //            articleList.fetch({success: function(){
 //                $("#content").html(new ArticleListView({model: articleList, page: p}).el);
 //            }});
 //            this.headerView.selectMenuItem('home-menu');
-//        });
-//        app_router.on('about', function(){
-//            if (!this.aboutView) {
-//                this.aboutView = new AboutView();
-//            }
-//            $('#content').html(this.aboutView.el);
-//            this.headerView.selectMenuItem('about-menu');
-//        });
+//            var articlelistView = new ListView();
+//            listView.render();
+        });
+
+        app_router.on('route:about', function(){
+            var aboutView = new AboutView();
+            aboutView.render();
+        });
+
         Backbone.history.start();
     };
 
