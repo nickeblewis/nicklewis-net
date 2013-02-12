@@ -47,6 +47,11 @@ define([
 //            listView.render();
         });
 
+        app_router.on('route:articleDetails', function() {
+            var aboutView = new AboutView();
+            aboutView.render();
+        });
+
         app_router.on('route:about', function(){
             var aboutView = new AboutView();
             aboutView.render();
