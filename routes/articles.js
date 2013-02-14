@@ -106,7 +106,7 @@ var populateDB = function() {
             picture: null
         },
         {
-            name: "Building a new website for 2013",
+            name: "Second",
             year: "2013-02-03T16:53:22.317Z",
             summary: null,
             description: "Recently I have started to build web apps using Javascript frameworks and so I decided to " +
@@ -118,7 +118,7 @@ var populateDB = function() {
             picture: null
         },
         {
-            name: "Building a new website for 2013",
+            name: "Third",
             year: "2013-02-03T16:53:22.317Z",
             summary: null,
             description: "Recently I have started to build web apps using Javascript frameworks and so I decided to " +
@@ -130,7 +130,7 @@ var populateDB = function() {
             picture: null
         },
         {
-            name: "Building a new website for 2013",
+            name: "Fourth",
             year: "2013-02-03T16:53:22.317Z",
             summary: null,
             description: "Recently I have started to build web apps using Javascript frameworks and so I decided to " +
@@ -142,7 +142,7 @@ var populateDB = function() {
             picture: null
         },
         {
-            name: "Building a new website for 2013",
+            name: "Fifth",
             year: "2013-02-03T16:53:22.317Z",
             summary: null,
             description: "Recently I have started to build web apps using Javascript frameworks and so I decided to " +

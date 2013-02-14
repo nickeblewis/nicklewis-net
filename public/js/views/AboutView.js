@@ -12,7 +12,7 @@ define([
 
 //      $('.menu li').removeClass('active');
 //      $('.menu li a[href="#"]').parent().addClass('active');
-            this.$el.html(aboutTemplate);
+        this.$el.html(aboutTemplate);
 
 //      var sidebarView = new SidebarView();
 //      sidebarView.render();
