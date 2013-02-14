@@ -7,8 +7,9 @@ define([
     'views/HomeView',
     'views/AboutView',
     'views/ArticleView',
+    'views/ArticleDetailView',
     'collections/Articles'
-], function($, _, Backbone, HeaderView, HomeView, AboutView, ArticleView, Articles){
+], function($, _, Backbone, HeaderView, HomeView, AboutView, ArticleView, ArticleDetailView, Articles){
     var AppRouter = Backbone.Router.extend({
         routes: {
             ""                  : "home",
@@ -45,6 +46,11 @@ define([
 //            this.headerView.selectMenuItem('home-menu');
 //            var articlelistView = new ListView();
 //            listView.render();
+        });
+
+        app_router.on('route:articleDetails', function(id) {
+            var articledetailView = new ArticleDetailView();
+            articledetailView.render(id);
         });
 
         app_router.on('route:about', function(){
