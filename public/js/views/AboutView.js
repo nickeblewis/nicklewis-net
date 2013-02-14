@@ -9,16 +9,8 @@ define([
         el: $("#content"),
 
         render: function(){
-
-//      $('.menu li').removeClass('active');
-//      $('.menu li a[href="#"]').parent().addClass('active');
-        this.$el.html(aboutTemplate);
-
-//      var sidebarView = new SidebarView();
-//      sidebarView.render();
-
+            this.$el.html(aboutTemplate);
         }
-
     });
 
     return AboutView;
