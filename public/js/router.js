@@ -8,7 +8,7 @@ define([
     'views/AboutView',
     'views/ArticleView',
     'views/ArticleDetailView',
-    'collections/Articles'
+    'collections/articles'
 ], function($, _, Backbone, HeaderView, HomeView, AboutView, ArticleView, ArticleDetailView, Articles){
     var AppRouter = Backbone.Router.extend({
         routes: {
