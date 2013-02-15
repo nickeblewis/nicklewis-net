@@ -5,12 +5,19 @@ var Server = mongo.Server,
     BSON = mongo.BSONPure;
 
 // TODO: Later we will need to change this to point to the remote DB server at MongoHQ
-var server = new Server('localhost', 27017, {auto_reconnect: true});
-db = new Db('nicklewis', server, {safe: true});
+//var server = new Server('localhost', 27017, {auto_reconnect: true});
+var server = new Server('linus.mongohq.com', 10050, {auto_reconnect: true});
+db = new Db('nicklewis', server);
+
+
 
 db.open(function(err, db) {
     if(!err) {
         console.log("Connected to 'nicklewis' database");
+        db.authenticate('nickeblewis', 'Winchester72', function(err, result) {
+             console.log(err);
+            console.log(result);
+        });
         db.collection('nicklewis', {safe:true}, function(err, collection) {
             if (err) {
                 console.log("The 'nicklewis' collection doesn't exist. Creating it with sample data...");
@@ -18,6 +25,7 @@ db.open(function(err, db) {
             }
         });
     }
+    
 });
 
 exports.findById = function(req, res) {
@@ -155,7 +163,10 @@ var populateDB = function() {
         }];
 
     db.collection('articles', function(err, collection) {
-        collection.insert(articles, {safe:true}, function(err, result) {});
+        collection.insert(articles, {safe:true}, function(err, result) {
+            console.log(err);
+            console.log(result);
+        });
     });
 
     // TODO: We need to add collections for resume and other things
