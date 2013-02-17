@@ -7,10 +7,10 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 
         defaults: {
             _id: null,
-            title: "",
-            description: "",
-            skills: "USA",
-            startdate: "California",
+            title: "i20 Water Ltd",
+            description: "test",
+            skills: ["HTML","CSS"],
+            startdate: "",
             enddate: ""
         }
     });

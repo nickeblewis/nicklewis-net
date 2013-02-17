@@ -1,5 +1,24 @@
 <% _.each(articles, function(article) { %>
-    <h2><%= article.get('name') %></h2>
-    <p><%= article.get('description') %></p>
-    <p><a href="#articles/<%= article.get('_id') %>">Read more...</a></p>
+    <div class="article">
+    	<div class="row">
+    		<h2><%= article.get('name') %></h2>
+    	</div>
+    	
+	    	<div class="row">	 
+	    		<% if (article.get('picture') !== null) { %>   	
+			    	<div class="span4">
+			    		<img src="<%= article.get('picture') %>" />
+			    	</div>
+			    	<div class="span8">
+			    		<blockquote><span class="bqstart">&#8220;</span><%= article.get('summary') %> <a href="#articles/<%= article.get('_id') %>">Read more...</a><span class="bqend">&#8221;</span></blockquote>	    		
+			    	</div> 
+		    	<% } else {%>
+					
+			    	<div class="span12">
+			    		<blockquote><span class="bqstart">&#8220;</span><%= article.get('summary') %> <a href="#articles/<%= article.get('_id') %>">Read more...</a><span class="bqend">&#8221;</span></blockquote>	    		
+			    	</div>  
+		    	<% } %>  		    		   	
+	    	</div>
+    	
+    </div>
 <% }); %>

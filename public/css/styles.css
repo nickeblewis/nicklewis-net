@@ -59,14 +59,14 @@ h5 {
 }
 
 legend {
-    font-family: 'Andika';
+    font-family: 'droid-sans';
 }
 
 .home-hero {
-    font-family: "Andika";
+    font-family: "droid-sans";
     font-size: 36;
     color: white;
-    background-image: url('img/bg2.jpg');
+    background-image: url('img/NIC_4636_grad.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: -19px;
@@ -75,6 +75,15 @@ legend {
     text-shadow: 1px 1px 1px #000;
 }
 
+.home-hero h1 {
+    font-size: 72px;
+    color: #D6B541;
+}
+
+.home-hero h3 {
+    font-size: 36px;
+    color: #D6B541;
+}
 @media only screen and ( max-width : 1000px ) {
     .home-hero {
         padding:100px;
@@ -123,3 +132,31 @@ legend {
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
+h1, h2 {
+    color: #f00;
+}
+
+blockquote {
+    font-size: 1.2em;
+    height: 100px;
+}
+.bqstart {
+     float: left;
+     height: 45px;
+     margin-top: -20px;
+     padding-top: 45px;
+     margin-bottom: -50px;
+     font-size: 700%;
+     color: #FF0000;
+
+ }
+
+ .bqend {
+     float: right;
+     height: 25px;
+     margin-top: 0px;
+     padding-top: 45px;
+     font-size: 700%;
+     color: #FF0000;
+ }
