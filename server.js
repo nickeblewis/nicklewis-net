@@ -10,7 +10,7 @@ app.configure(function () {
     app.set('ip', process.env.IP);
     app.use(express.logger('dev'));  /* 'default', 'short', 'tiny', 'dev' */
     app.use(express.bodyParser()),
-        app.use(express.static(path.join(__dirname, 'public')));
+    app.use(express.static(path.join(__dirname, 'public')));
 });
 
 app.get('/articles', article.findAll);
