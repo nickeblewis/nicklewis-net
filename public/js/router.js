@@ -8,11 +8,11 @@ define([
     'views/HeaderView',
     'views/HomeView',
     'views/AboutView',
-    'views/ArticleView',
+    'views/ArticleListView',
     'views/ArticleDetailView',
     'collections/articles'
-    
-], function($, _, Backbone, HeaderView, HomeView, AboutView, ArticleView, ArticleDetailView, Articles){
+
+], function($, _, Backbone, HeaderView, HomeView, AboutView, ArticleListView, ArticleDetailView, Articles){
     var AppRouter = Backbone.Router.extend({
         routes: {
             "" : "home",
@@ -39,8 +39,8 @@ define([
         });
 
         app_router.on('route:articles', function(page){
-            var articleView = new ArticleView();
-            articleView.render();
+            var articleListView = new ArticleListView();
+            articleListView.render();
 //            var p = page ? parseInt(page, 10) : 1;
 //            var articleList = new Articles();
 //            articleList.fetch({success: function(){
@@ -61,6 +61,7 @@ define([
             aboutView.render();
         });
 
+        // TODO: Add routes for 
         Backbone.history.start();
     };
 

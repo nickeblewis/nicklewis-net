@@ -2,10 +2,10 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'text!templates/articles/articleTemplate.html',
+    'text!templates/articles/articleListTemplate.html',
     'collections/articles'
-], function($, _, Backbone, articleTemplate, Articles) {
-    var ArticleView = Backbone.View.extend({
+], function($, _, Backbone, articleListTemplate, Articles) {
+    var ArticleListView = Backbone.View.extend({
         el: $("#content"),
 
         render: function () {
@@ -13,13 +13,13 @@ define([
             var articles = new Articles();
             articles.fetch({
                 success: function(articles) {
-                    $(that.el).html(_.template(articleTemplate, {articles: articles.models, _:_}));
+                    $(that.el).html(_.template(articleListTemplate, {articles: articles.models, _:_}));
                 }
             });
         }
     });
 
-    return ArticleView;
+    return ArticleListView;
 });
 
 //define([
