@@ -11,6 +11,7 @@ define([
     'views/ArticleView',
     'views/ArticleDetailView',
     'collections/articles'
+    
 ], function($, _, Backbone, HeaderView, HomeView, AboutView, ArticleView, ArticleDetailView, Articles){
     var AppRouter = Backbone.Router.extend({
         routes: {
