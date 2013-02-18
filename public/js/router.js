@@ -12,12 +12,12 @@ define([
 ], function($, _, Backbone, HeaderView, HomeView, AboutView, ArticleView, ArticleDetailView, Articles){
     var AppRouter = Backbone.Router.extend({
         routes: {
-            ""                  : "home",
-            "articles"	: "articles",
-            "articles/page/:page"	: "list",
-            "articles/add"         : "addArticle",
-            "articles/:id"         : "articleDetails",
-            "about"             : "about",
+            "" : "home",
+            "articles" : "articles",
+            "articles/page/:page" : "list",
+            "articles/add" : "addArticle",
+            "articles/:id" : "articleDetails",
+            "about" : "about",
 
             // Default
             "*actions": "defaultRoute"
