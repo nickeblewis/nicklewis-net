@@ -4,12 +4,9 @@ var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
 
-// TODO: Later we will need to change this to point to the remote DB server at MongoHQ
 //var server = new Server('localhost', 27017, {auto_reconnect: true});
 var server = new Server('linus.mongohq.com', 10050, {auto_reconnect: true});
 db = new Db('nicklewis', server);
-
-
 
 db.open(function(err, db) {
     if(!err) {
@@ -19,6 +16,7 @@ db.open(function(err, db) {
             console.log(result);
         });
         db.collection('nicklewis', {safe:true}, function(err, collection) {
+            // TODO: I don't want this to be added using populatedb anymore, the data will be defined in one place, the database
             if (err) {
                 console.log("The 'nicklewis' collection doesn't exist. Creating it with sample data...");
                 populateDB();

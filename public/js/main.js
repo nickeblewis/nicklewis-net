@@ -3,7 +3,6 @@
 // Require.js allows us to configure shortcut alias
 // There usage will become more apparent further along in the tutorial.
 
-// TODO: Change the filenames so that it is hyphen min rather than dot min
 require.config({
     shim: {
         underscore: {
@@ -20,7 +19,7 @@ require.config({
         backbone: 'libs/backbone-min',
         bootstrap: 'libs/bootstrap-min',
         text: 'libs/text',
-        templates: '../templates' // TODO: Move the tpl directory up, back to where it was an call it templates not tpl
+        templates: '../templates' 
     }
 
 });

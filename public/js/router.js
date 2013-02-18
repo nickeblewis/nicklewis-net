@@ -3,6 +3,8 @@ define([
     'jquery',
     'underscore',
     'backbone',
+
+    // NOTE: Is it necessary to specify all of these? Will 'views/' work or something like that?
     'views/HeaderView',
     'views/HomeView',
     'views/AboutView',
