@@ -7,7 +7,9 @@ define([
 ], function($, _, Backbone, articleListTemplate, Articles) {
     var ArticleListView = Backbone.View.extend({
         el: $("#content"),
+        initialize: function() {
 
+        },
         render: function () {
             var that = this;
             var articles = new Articles();
