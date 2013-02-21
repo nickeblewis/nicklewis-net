@@ -31,6 +31,7 @@ var PeopleCollection = Backbone.Collection.extend({
 var PeopleView = Backbone.View.extend({
      tagName: 'ul',
     
+     // template: Should we move the template from below to here? Would this explain odd rendering of list?
      render: function() {          
           this.collection.each(function(person) {               
                var personView = new PersonView({ model: person });
@@ -49,6 +50,8 @@ var PeopleView = Backbone.View.extend({
 // The View for a Person
 var PersonView = Backbone.View.extend({
      tagName: 'li',
+     
+     // Should the below template be moved from here into the collection? Doesn't make complete sense!
      template: _.template( $('#personTemplate').html() ),
     
      render: function() {
