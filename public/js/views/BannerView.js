@@ -6,7 +6,7 @@ define([
 ], function($, _, Backbone, bannerTemplate){
 
   var BannerView = Backbone.View.extend({
-    el: $("#contentintro"),
+    el: $(".banner"),
 
     render: function(){      
       this.$el.html(bannerTemplate);
