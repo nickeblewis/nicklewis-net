@@ -6,18 +6,20 @@ define([
 
     // NOTE: Is it necessary to specify all of these? Will 'views/' work or something like that?
     'views/HeaderView',
+    'views/BannerView',
     'views/HomeView',
     'views/AboutView',
     'views/ArticleListView',
-    'views/ArticleDetailView',
-    'views/block1',
+    'views/ArticleDetailView',    
+    'views/PhotoView',    
     'collections/articles'
 
-], function($, _, Backbone, HeaderView, HomeView, AboutView, ArticleListView, ArticleDetailView, Block1View, Articles){
+], function($, _, Backbone, HeaderView, BannerView, HomeView, AboutView, ArticleListView, ArticleDetailView, PhotoView, Articles){
     var AppRouter = Backbone.Router.extend({
         routes: {
             "" : "home",
             "articles" : "articles",
+            "photos" : "photos",
             "articles/page/:page" : "list",
             "articles/add" : "addArticle",
             "articles/:id" : "articleDetails",
@@ -34,11 +36,14 @@ define([
         var headerView = new HeaderView();
         headerView.render();
 
+        var bannerView = new BannerView();
+        bannerView.render();
+
         app_router.on('route:default', function() {
             var homeView = new HomeView();
             homeView.render();
         });
-        
+
         app_router.on('route:home', function(actions){
             // The "Home" page shows both the homeView that I am going to perhaps rename as IntroView?
             var homeView = new HomeView();
@@ -55,6 +60,19 @@ define([
         app_router.on('route:articles', function(page){
             var articleListView = new ArticleListView();
             articleListView.render();
+//            var p = page ? parseInt(page, 10) : 1;
+//            var articleList = new Articles();
+//            articleList.fetch({success: function(){
+//                $("#content").html(new ArticleListView({model: articleList, page: p}).el);
+//            }});
+//            this.headerView.selectMenuItem('home-menu');
+//            var articlelistView = new ListView();
+//            listView.render();
+        });
+
+        app_router.on('route:photos', function(page){
+            var photoView = new PhotoView();
+            photoView.render();
 //            var p = page ? parseInt(page, 10) : 1;
 //            var articleList = new Articles();
 //            articleList.fetch({success: function(){

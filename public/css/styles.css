@@ -2,6 +2,10 @@
     font-family: 'Arvo';
 }
 
+.navbar-inner {
+    background-color: #C8643C;
+}
+
 a.plain:link {
     color: #333;
     text-decoration: none;
@@ -66,11 +70,14 @@ legend {
     font-family: "droid-sans";
     font-size: 36;
     color: white;
-    background-image: url('img/NIC_4636_grad.jpg');
+    /*background-image: url('img/NIC_4636_grad.jpg');*/
+    background-image: url('img/webtexture.jpg');
+    /*background-image: url('img/NIC_4699.jpg');*/
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: -19px;
     padding: 180px;
+    padding: 60px;
     text-align : center;
     text-shadow: 1px 1px 1px #000;
 }
@@ -135,7 +142,7 @@ legend {
 }
 
 h1, h2 {
-    color: #f00;
+    color: #3a0022;
 }
 
 blockquote {

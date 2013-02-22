@@ -1,10 +1,10 @@
 <% _.each(articles, function(article) { %>
     <div class="article">
-    	<div class="row">
+    	<div class="row-fluid">
     		<h2><%= article.get('name') %></h2>
     	</div>
     	
-	    	<div class="row">	 
+	    	<div class="row-fluid">	 
 	    		<% if (article.get('picture') !== null) { %>   	
 			    	<div class="span4">
 			    		<img src="<%= article.get('picture') %>" />
