@@ -6,7 +6,7 @@ define([
 ], function($, _, Backbone, aboutTemplate){
 
     var AboutView = Backbone.View.extend({
-        el: $("#content"),
+        el: $("#contentmain"),
 
         render: function(){
             this.$el.html(aboutTemplate);

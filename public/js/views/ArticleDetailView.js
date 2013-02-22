@@ -6,7 +6,7 @@ define([
     'models/article'
 ], function($, _, Backbone, articledetailTemplate, Article) {
     var ArticleDetailView = Backbone.View.extend({
-        el: $("#content"),
+        el: $("#contentmain"),
 
         render: function (id) {
             var that = this;

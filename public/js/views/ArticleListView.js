@@ -6,7 +6,7 @@ define([
     'collections/articles'
 ], function($, _, Backbone, articleListTemplate, Articles) {
     var ArticleListView = Backbone.View.extend({
-        el: $("#content"),
+        el: $("#contentmain"),
         initialize: function() {
 
         },

@@ -9,15 +9,9 @@ define([
         el: $(".header"),
 
         render: function(){
-            // $('.menu li').removeClass('active');
-            // $('.menu li a[href="#"]').parent().addClass('active');
             this.$el.html(headerTemplate);
-
-            // var sidebarView = new SidebarView();
-            // sidebarView.render();
         }
     });
 
     return HeaderView;
-
 });

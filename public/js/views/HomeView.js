@@ -6,21 +6,13 @@ define([
 ], function($, _, Backbone, homeTemplate){
 
   var HomeView = Backbone.View.extend({
-    el: $("#content"),
+    el: $("#contentintro"),
 
-    render: function(){
-      
-//      $('.menu li').removeClass('active');
-//      $('.menu li a[href="#"]').parent().addClass('active');
+    render: function(){      
       this.$el.html(homeTemplate);
-
-//      var sidebarView = new SidebarView();
-//      sidebarView.render();
- 
     }
 
   });
 
   return HomeView;
-  
 });

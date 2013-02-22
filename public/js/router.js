@@ -10,9 +10,10 @@ define([
     'views/AboutView',
     'views/ArticleListView',
     'views/ArticleDetailView',
+    'views/block1',
     'collections/articles'
 
-], function($, _, Backbone, HeaderView, HomeView, AboutView, ArticleListView, ArticleDetailView, Articles){
+], function($, _, Backbone, HeaderView, HomeView, AboutView, ArticleListView, ArticleDetailView, Block1View, Articles){
     var AppRouter = Backbone.Router.extend({
         routes: {
             "" : "home",
@@ -23,7 +24,7 @@ define([
             "about" : "about",
 
             // Default
-            "*actions": "defaultRoute"
+            "*actions": "default"
         }
     });
 
@@ -33,9 +34,22 @@ define([
         var headerView = new HeaderView();
         headerView.render();
 
-        app_router.on('route:home', function(actions){
+        app_router.on('route:default', function() {
             var homeView = new HomeView();
             homeView.render();
+        });
+        
+        app_router.on('route:home', function(actions){
+            // The "Home" page shows both the homeView that I am going to perhaps rename as IntroView?
+            var homeView = new HomeView();
+            homeView.render();
+
+            // ...and then the list of top articles using an ArticleListView
+            //var articleListView = new ArticleListView();
+            //articleListView.render();
+
+            // var block1View = new Block1View();
+            // block1View.render();
         });
 
         app_router.on('route:articles', function(page){

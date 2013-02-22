@@ -17,9 +17,9 @@ require.config({
         jquery: 'libs/jquery-min',
         underscore: 'libs/underscore-min',
         backbone: 'libs/backbone-min',
-        bootstrap: 'libs/bootstrap-min',
+        bootstrap: 'libs/bootstrap/js/bootstrap.min.js',
         text: 'libs/text',
-        templates: '../templates' 
+        templates: '../templates'        
     }
 
 });
