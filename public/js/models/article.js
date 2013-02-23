@@ -3,7 +3,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
         urlRoot: "/articles",
         idAttribute: "_id",
 
-        initialize: function () {},
+        initialize: function() {},
 
         defaults: {
             _id: null,
