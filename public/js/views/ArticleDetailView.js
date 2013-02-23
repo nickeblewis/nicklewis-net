@@ -16,6 +16,8 @@ define([
                     $(that.el).html(_.template(articledetailTemplate, article.attributes));
                 }
             });
+
+            return this;
         }
     });
 

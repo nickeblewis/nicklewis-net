@@ -18,6 +18,8 @@ define([
                     $(that.el).html(_.template(articleListTemplate, {articles: articles.models, _:_}));
                 }
             });
+
+            return this;
         }
     });
 

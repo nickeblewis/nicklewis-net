@@ -10,6 +10,7 @@ define([
 
         render: function(){
             this.$el.html(headerTemplate);
+            return this;
         }
     });
 

@@ -10,6 +10,7 @@ define([
 
         render: function(){
             this.$el.html(photoTemplate);
+            return this;
         }
     });
 
