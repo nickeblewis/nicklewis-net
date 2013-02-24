@@ -1,7 +1,7 @@
-define(['underscore', 'backbone', 'models/article'],
+define(['underscore', 'backbone', 'models/role'],
     function(_, Backbone, RoleModel) {
     var Roles = Backbone.Collection.extend({
-        model: ArticleModel,
+        model: RoleModel,
         url: "/roles"
     });
      return Roles;
