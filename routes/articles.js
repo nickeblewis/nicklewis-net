@@ -28,8 +28,9 @@ db.open(function(err, db) {
 
 exports.findById = function(req, res) {
     var id = req.params.id;
+    var coll = req.params.collection;
     console.log('Retrieving article: ' + id);
-    db.collection('articles', function(err, collection) {
+    db.collection(coll, function(err, collection) {
         collection.findOne({'_id':new BSON.ObjectID(id)}, function(err, item) {
             res.send(item);
         });
@@ -37,7 +38,9 @@ exports.findById = function(req, res) {
 };
 
 exports.findAll = function(req, res) {
-    db.collection('articles', function(err, collection) {
+    var coll = req.params.collection;
+    console.log('you passed through the collection of ' + coll);
+    db.collection(coll, function(err, collection) {
         collection.find().toArray(function(err, items) {
             res.send(items);
         });

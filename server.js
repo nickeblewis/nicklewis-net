@@ -13,11 +13,11 @@ app.configure(function () {
     app.use(express.static(path.join(__dirname, 'public')));
 });
 
-app.get('/articles', article.findAll);
-app.get('/articles/:id', article.findById);
-app.post('/articles', article.addArticle);
-app.put('/articles/:id', article.updateArticle);
-app.delete('/articles/:id', article.deleteArticle);
+app.get('/:collection', article.findAll);
+app.get('/:collection/:id', article.findById);
+app.post('/:collection', article.addArticle);
+app.put('/:collection/:id', article.updateArticle);
+app.delete('/:collection/:id', article.deleteArticle);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log("Express server listening on port " + app.get('port'));

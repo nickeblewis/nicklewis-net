@@ -10,15 +10,17 @@ define([
     'views/HomeView',
     'views/AboutView',
     'views/ArticleListView',
+    'views/ResumeView',
     'views/ArticleDetailView',    
     'views/PhotoView',    
     'collections/articles'
 
-], function($, _, Backbone, HeaderView, BannerView, HomeView, AboutView, ArticleListView, ArticleDetailView, PhotoView, Articles){
+], function($, _, Backbone, HeaderView, BannerView, HomeView, AboutView, ArticleListView, ResumeView, ArticleDetailView, PhotoView, Articles){
     var AppRouter = Backbone.Router.extend({
         routes: {
             "index" : "home",
             "articles" : "articles",
+            "resume" : "resume",
             "photos" : "photos",
             "articles/page/:page" : "list",
             "articles/add" : "addArticle",
@@ -58,6 +60,11 @@ define([
 //            this.headerView.selectMenuItem('home-menu');
 //            var articlelistView = new ListView();
 //            listView.render();
+        }); 
+
+        app_router.on('route:resume', function(){
+            var resumeView = new ResumeView();
+            resumeView.render();
         });
 
         app_router.on('route:photos', function(page){
