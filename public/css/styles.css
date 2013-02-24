@@ -168,3 +168,10 @@ blockquote {
      font-size: 700%;
      color: #FF0000;
  }
+
+ .skillpill {
+    background-color: #cecedd;
+    padding: 4px;
+    border-radius: 2px;
+    color: #fff;
+ }
