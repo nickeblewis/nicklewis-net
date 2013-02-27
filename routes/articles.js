@@ -12,16 +12,16 @@ db.open(function(err, db) {
     if(!err) {
         console.log("Connected to 'nicklewis' database");
         db.authenticate('nickeblewis', 'Winchester72', function(err, result) {
-             console.log(err);
-            console.log(result);
+            //  console.log(err);
+            // console.log(result);
         });
-        db.collection('nicklewis', {safe:true}, function(err, collection) {
-            // TODO: I don't want this to be added using populatedb anymore, the data will be defined in one place, the database
-            if (err) {
-                console.log("The 'nicklewis' collection doesn't exist. Creating it with sample data...");
-                populateDB();
-            }
-        });
+        // db.collection('nicklewis', {safe:true}, function(err, collection) {
+        //     // TODO: I don't want this to be added using populatedb anymore, the data will be defined in one place, the database
+        //     if (err) {
+        //         console.log("The 'nicklewis' collection doesn't exist. Creating it with sample data...");
+        //         populateDB();
+        //     }
+        // });
     }
     
 });
