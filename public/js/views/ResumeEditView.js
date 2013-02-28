@@ -3,10 +3,14 @@ define([
     'underscore',
     'backbone',
     'text!templates/resume/resumeeditTemplate.html',
-    'models/resume'
+    'models/role'
 ], function($, _, Backbone, resumeeditTemplate, Resume) {
     var ResumeEditView = Backbone.View.extend({
         el: $("#contentmain"),
+
+        events: {
+            "click .save" : "save"
+        },
 
         render: function (id) {
             var that = this;
@@ -18,6 +22,10 @@ define([
             });
 
             return this;
+        },
+
+        save: function() {            
+            this.model.save();
         }
     });
 

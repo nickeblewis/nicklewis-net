@@ -65,10 +65,11 @@ exports.addArticle = function(req, res) {
 exports.updateArticle = function(req, res) {
     var id = req.params.id;
     var article = req.body;
+    var coll = req.params.collection;
     delete article._id;
     console.log('Updating article: ' + id);
     console.log(JSON.stringify(article));
-    db.collection('articles', function(err, collection) {
+    db.collection(coll, function(err, collection) {
         collection.update({'_id':new BSON.ObjectID(id)}, article, {safe:true}, function(err, result) {
             if (err) {
                 console.log('Error updating article: ' + err);
