@@ -9,7 +9,7 @@ define([
         el: $("#contentmain"),
 
         events: {
-            "click .save" : "save"
+            "click .save" : "saveResume"
         },
 
         render: function (id) {
@@ -24,8 +24,13 @@ define([
             return this;
         },
 
-        save: function() {            
+        saveResume: function() {
+             this.model.set({
+            title:$('#title').val(),
+            description:$('#description').val()
+        });
             this.model.save();
+        return false;
         }
     });
 

@@ -19,7 +19,7 @@
 
     <!-- data-main attribute tells require.js to load
              scripts/main.js after require.js loads. -->
-    <script data-main="js/main" src="js/libs/require-min.js"></script>
+    <script data-main="js/common" src="js/lib/require-min.js"></script>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -48,10 +48,63 @@
 <body>
 
 <!-- Backbone inserts the navigation header in here -->
-<div class="header"></div>
+<div class="header">
+    <div class="navbar navbar-fixed-top" style="z-index: 10;">
+    <div class="navbar-inner">
+        <div class="container">
+            
+            <a class="brand" href="/">Nick Lewis</a>
+
+            <div>
+
+                <ul class="nav">
+                    <!-- <li class="add-menu"><a href="#articles">Browse Articles</a></li> -->
+                    <!-- <li class="add-menu"><a href="#articles/add"><i class="icon-edit icon-white"></i> Add Article</a></li> -->
+                </ul>
+
+                <ul class="nav pull-right">
+                    <li class="about-menu"><a href="#">Home</a></li>
+                    <li class="about-menu"><a href="#about">About</a></li>
+                    <li class="about-menu"><a href="#articles">Articles</a></li>
+                    <li class="about-menu"><a href="#photos">Photography</a></li>
+                    <li class="about-menu"><a href="#resume">Resume</a></li>
+                    <li class="about-menu"><a href="#contact">Contact</a></li>
+                    <!-- <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://documentcloud.github.com/backbone/" target="_blank">Backbone.js</a></li>
+                            <li><a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a></li>
+                            <li><a href="http://nodejs.org/" target="_blank">Node.js</a>
+                            <li><a href="http://expressjs.com/mongodb" target="_blank">Express</a>
+                            <li><a href="http://www.mongodb.org/" target="_blank">MongoDB</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="nav-header">This App</li>
+                            <li><a href="#" target="_blank">GitHub Repository</a></li>
+                            <li><a href="http://coenraets.org" target="_blank">Author's Blog</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+</div>
 
 <!-- BB inserts the Graphical/Fonty "Nick Lewis" banner in here -->
-<div class="banner"></div>
+<div class="banner">
+    <div class="home-hero">
+  <h1>Nick Lewis</h1>
+  <h3>Creative Web Developer, Writer & Photographer</h3>
+  <h5>...who loves doing this stuff</h5> 
+</div>
+<div class="bs-docs-social">
+  <div class="container">   
+  </div>
+</div>
+
+</div>
 <div class="container">
 
     <div class="row-fluid">        
