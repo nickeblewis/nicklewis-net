@@ -6,21 +6,34 @@ require.config({
         'bootstrap': 'lib/bootstrap-min',
         'text': 'lib/text',
         'utils': 'utils',
-        'HeaderView' : 'views/header',
-        'BannerView' : 'views/banner',
+        'paginator': 'views/paginator',
+        
+        'HomeViewTpl' : '../templates/home/HomeView.html',
+        'AboutViewTpl' : '../templates/about/AboutView.html',
+                
         'HomeView' : 'views/home',
-        'HomeViewTpl' : '../templates/home/homeTemplate.html',
-        'HeaderViewTpl' : '../templates/layout/headerTemplate.html',
-        'BannerViewTpl' : '../templates/layout/bannerTemplate.html',
+        'AboutView' : 'views/about',
 
-        'AboutView' : 'views/AboutView',
-        'ArticleListView' : 'views/ArticleListView',
+        // 'ArticlesViewTpl' : '../templates/articles/ArticleView.html',
+        // 'ArticleModel': 'models/article',
+        // 'ArticleCollection' : 'collections/articles'
+        // 'ArticlesView' : 'views/articles',
+        // 'ArticleViewTpl' : '../templates/articles/ArticleView.html',
+        // 'ArticleDetailView' : 'views/ArticleDetailView',
+
+
+        'ArticleModel': 'models/article',
+        'ArticlesCollection': 'collections/articles',
+        'ArticleView': 'views/articledetails',
+        'ArticleViewTpl': '../templates/articles/ArticleView.html',
+        'ArticleListView': 'views/articlelist',
+        'ArticleListItemView': 'views/articlelistitem',
+        'ArticleListItemViewTpl': '../templates/articles/ArticleListItemView.html',
+
+
         'ResumeView' : 'views/ResumeView',
         'ResumeEditView' : 'views/ResumeEditView',
-        'ArticleDetailView' : 'views/ArticleDetailView',   
-        'PhotoView' : 'views/PhotoView',    
-        'ArticleModel': 'models/article',
-        'ArticleCollection' : 'collections/articles'
+        'PhotoView' : 'views/PhotoView',
 
         //'paginator': 'views/paginator',
         //'WineModel': 'models/wine',

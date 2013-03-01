@@ -1,5 +1,5 @@
 define(['underscore', 'backbone'], function(_, Backbone) {
-    var Photograph = Backbone.Model.extend({
+    return Backbone.Model.extend({
         urlRoot: "/photographs",
         idAttribute: "_id",
 
@@ -12,6 +12,4 @@ define(['underscore', 'backbone'], function(_, Backbone) {
             image: null
         }
     });
-
-    return Photograph;
 });

@@ -1,5 +1,5 @@
 define(['underscore', 'backbone'], function(_, Backbone) {
-    var Home = Backbone.Model.extend({
+    return Backbone.Model.extend({
         
 
         initialize: function() {
@@ -7,9 +7,9 @@ define(['underscore', 'backbone'], function(_, Backbone) {
         },
 
         defaults: {
-            introduction: '1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates pariatur doloribus magni ullam beatae rem maxime debitis magnam vel eveniet. Inventore temporibus quia possimus eaque minima voluptatum soluta tempora dignissimos quos ex suscipit odit id corrupti in consequuntur ea maiores tempore sunt rem alias nesciunt nostrum neque facilis perspiciatis nemo? Inventore corporis deleniti porro labore corrupti similique nisi aut quos quo molestiae magnam eaque ipsum tenetur impedit recusandae perferendis suscipit earum. Excepturi nulla recusandae tenetur qui ratione illo harum. Officia adipisci consectetur debitis dolorem alias laborum perferendis illo perspiciatis consequatur dolores dicta quaerat facere asperiores omnis laudantium nesciunt error dolore assumenda quia molestias corporis distinctio culpa quae porro fugiat minima quisquam est. Labore odio beatae porro rem omnis mollitia sed architecto error nam assumenda? Aspernatur exercitationem doloremque odio. Rem temporibus ab sequi laudantium explicabo nobis itaque dolore molestias perferendis fugiat modi nemo cum earum cupiditate est alias soluta optio eaque quo laborum officiis iusto similique atque? Omnis hic repudiandae debitis praesentium consequuntur et dolorum impedit aspernatur suscipit commodi facilis dicta voluptatibus velit nobis eos ducimus esse quisquam voluptas corporis laborum porro odit voluptates. Laborum tempora eum quod natus suscipit quidem explicabo est beatae eaque totam doloremque atque! Molestias quam necessitatibus eveniet sit perferendis alias provident voluptatum incidunt a voluptatibus commodi molestiae ad eius expedita sed sint inventore ipsum libero fugit consectetur. Officiis nisi eum modi laboriosam adipisci eligendi aliquam aperiam dolores nam necessitatibus incidunt repellat voluptas quaerat eos delectus nostrum molestias ab fuga nesciunt tempora consequatur qui veritatis quis quae ex quidem ullam! Quisquam quos accusantium nulla vel aliquam inventore!',
+            introduction: '<p>I am a web developer who works with a multitude of technologies and people in the design world to help make their designs or basic ideas a reality in terms of a living, breathing site. I am based in Farnborough (Hampshire), with easy access to London and other parts of the UK. I have been in the software business for around 20 years and in recent times, been attracted strongly to web development. My work has got me involved with Microsoft technologies, most notably .NET and more recently MVC. I now work more and more with the new and exciting Javascript frameworks which provide beautifully light, yet robust web solutions. jQuery, backboneJS, angularJS, knockoutJS and NodeJS are all fantastic. I love them.</p><p>I am also a photographer and have written articles about the web for photography magazines in the past. I used to shoot concerts and at the time was frequently published in the national press. However my passion for the web was and still is a lot stronger. Photography still plays an important role in my life, which is why when building sites, I put those skills to use too. Nothing learnt, should be wasted. Skills are valuable.</p><p>Please stay tuned to this website for I plan to use it as a way of demonstrating web techniques and a lot of other stuff. Stuff is great.</p>',
             
-            currentstatus: 'Contracting for Avvio Ltd nr. Henley-on-Thames',
+            currently: 'Contracting for Avvio Ltd nr. Henley-on-Thames. However this has just come to an end, so now putting my marketing hat on for the coming week to look for new projects to jump on. Now is the time to call me!',
             
             // TODO: Make an array of objects with either links to external pages or other routes within this site
             projects: [
@@ -21,10 +21,8 @@ define(['underscore', 'backbone'], function(_, Backbone) {
                 ],
 
             // TODO: Photography section needs some thought, especially on image storage                
-            photography: 'A photo module will appear here very soon',
-            writing: 'A series of articles about technology and how it is changing the world and my life so much, coming soon'
+            looking: 'I provide freelance or contract services to businesses and you may read up more on this under my resume pages',
+            coding: 'If you are interested in coding yourself, then you may be interested to know that this site was developed using BackboneJS, NodeJS/Express, Twitter Bootstrap, MongoDB and we host this site on Heroku. Cool hey?'
         }
     });
-
-    return Home;
 });

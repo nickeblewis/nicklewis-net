@@ -1,8 +1,6 @@
-define(['underscore', 'backbone', 'models/article'],
-    function(_, Backbone, ArticleModel) {
-    var Articles = Backbone.Collection.extend({
-        model: ArticleModel,
+define(['underscore', 'backbone', 'models/article'], function(_, Backbone, Article) {
+    return Backbone.Collection.extend({
+        model: Article,
         url: "/articles"
     });
-     return Articles;
 });
