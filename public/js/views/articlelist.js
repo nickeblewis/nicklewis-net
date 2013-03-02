@@ -15,15 +15,13 @@ define(['jquery', 'underscore', 'backbone', 'ArticleListItemView', 'paginator'],
 
             $(this.el).html('<ul class="thumbnails"></ul>');
 
-            for (var i = startPos; i < endPos; i++) {
-                console.log(articles[i]);
-                //$('.thumbnails', this.el).append(new ArticleListItemView({model: articles[i]}).render().el);
+            for (var i = startPos; i < endPos; i++) {                
+                $('.thumbnails', this.el).append(new ArticleListItemView({model: articles[i]}).render().el);
             }
 
             $(this.el).append(new Paginator({model: this.model, page: this.options.page}).render().el);
 
             return this;
         }
-    });
-    
+    });    
 });

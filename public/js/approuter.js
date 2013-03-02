@@ -50,6 +50,16 @@ define([
             });
         },
 
+        articleDetails: function (id) {
+            var self = this;
+            // this.selectMenuItem();
+            require(['routes/addview'], function(av){
+                av.initView(id).done(function(htmlContent){
+                    self.setContent(htmlContent);
+                });
+            });
+        },
+
         resume: function() {
             var self = this;
             require(['routes/resume'], function(htmlContent){
@@ -64,11 +74,6 @@ define([
             });
         }
 
-        // resumeEdit: function() {},
-        // photos: function() {},
-        // list: function() {},
-        // addArticle: function() {},
-        // articleDetails: function() {}
         
     });    
 });

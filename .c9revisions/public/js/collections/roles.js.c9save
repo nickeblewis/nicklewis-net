@@ -1,2 +1,0 @@
-{"ts":1360932842852,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
-{"contributors":[],"silentsave":false,"ts":1360932932147,"patch":[[{"diffs":[[1,"define(['underscore', 'backbone', 'models/article'],\r\n    function(_, Backbone, RoleModel) {\r\n    var Roles = Backbone.Collection.extend({\r\n        model: ArticleModel,\r\n        url: \"/roles\"\r\n    });\r\n     return Roles;\r\n});"]],"start1":0,"start2":0,"length1":0,"length2":225}]],"length":225,"saved":false}

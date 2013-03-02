@@ -2,48 +2,101 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'text!templates/articles/articledetailTemplate.html',
+    'utils',
+    'text!ArticleViewTpl',
+    // TODO: Had to change ArticleModel below to models/article throughout the project, will need to change back
     'models/article'
-], function($, _, Backbone, articledetailTemplate, Article) {
-    var ArticleDetailView = Backbone.View.extend({
-        el: $("#contentmain"),
+], function($, _, Backbone, utils, ArticleViewTpl, Article) {
+    return Backbone.View.extend({
+        
+        initialize: function () {
+            this.render();
+        },
+
+        template: _.template(ArticleViewTpl),
 
         render: function (id) {
-            var that = this;
-            var article = new Article({_id: id});
-            article.fetch({
-                success: function() {
-                    $(that.el).html(_.template(articledetailTemplate, article.attributes));
+            $(this.el).html(this.template(this.model.toJSON()));
+            return this;
+        },
+
+        events: {
+            "change"        : "change",
+            "click .save"   : "beforeSave",
+            "click .delete" : "deleteArticle",
+            "drop #picture" : "dropHandler"
+        },
+
+        change: function (event) {
+            // Remove any existing alert message
+            utils.hideAlert();
+
+            // Apply the change to the model
+            var target = event.target;
+            var change = {};
+            change[target.name] = target.value;
+            this.model.set(change);
+
+            // Run validation rule (if any) on changed item
+            var check = this.model.validateItem(target.id);
+            if (check.isValid === false) {
+                utils.addValidationError(target.id, check.message);
+            } else {
+                utils.removeValidationError(target.id);
+            }
+        },
+
+        beforeSave: function () {
+            var self = this;
+            var check = this.model.validateAll();
+            if (check.isValid === false) {
+                utils.displayValidationErrors(check.messages);
+                return false;
+            }
+            this.saveArticle();
+            return false;
+        },
+
+        saveArticle: function () {
+            var self = this;
+            console.log('before save');
+            this.model.save(null, {
+                success: function (model) {
+                    self.render();
+                    app.navigate('articles/' + model.id, false);
+                    utils.showAlert('Success!', 'Article saved successfully', 'alert-success');
+                },
+                error: function () {
+                    utils.showAlert('Error', 'An error occurred while trying to delete this item', 'alert-error');
                 }
             });
+        },
 
-            return this;
+        deleteArticle: function () {
+            this.model.destroy({
+                success: function () {
+                    alert('Article deleted successfully');
+                    window.history.back();
+                }
+            });
+            return false;
+        },
+
+        dropHandler: function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+            var e = event.originalEvent;
+            e.dataTransfer.dropEffect = 'copy';
+            this.pictureFile = e.dataTransfer.files[0];
+
+            // Read the image file from the local file system and display it in the img tag
+            var reader = new FileReader();
+            reader.onloadend = function () {
+                $('#picture').attr('src', reader.result);
+            };
+            reader.readAsDataURL(this.pictureFile);
         }
+
     });
 
-    return ArticleDetailView;
 });
-
-//define([
-//    'jquery',
-//    'underscore',
-//    'backbone',
-//    'text!templates/articles/articleTemplate.html',
-//    'collections/articles'
-//], function($, _, Backbone, articleTemplate, Articles) {
-//    var ArticleListItemView = Backbone.View.extend({
-//
-//        tagName: "li",
-//
-//        initialize: function () {
-//            this.model.bind("change", this.render, this);
-//            this.model.bind("destroy", this.close, this);
-//        },
-//
-//        render: function () {
-//            $(this.el).html(this.template(this.model.toJSON()));
-//            return this;
-//        }
-//
-//    });
-//});

@@ -7,46 +7,20 @@ require.config({
         'text': 'lib/text',
         'utils': 'utils',
         'paginator': 'views/paginator',
-        
         'HomeViewTpl' : '../templates/home/HomeView.html',
         'AboutViewTpl' : '../templates/about/AboutView.html',
-                
         'HomeView' : 'views/home',
         'AboutView' : 'views/about',
-
-        // 'ArticlesViewTpl' : '../templates/articles/ArticleView.html',
-        // 'ArticleModel': 'models/article',
-        // 'ArticleCollection' : 'collections/articles'
-        // 'ArticlesView' : 'views/articles',
-        // 'ArticleViewTpl' : '../templates/articles/ArticleView.html',
-        // 'ArticleDetailView' : 'views/ArticleDetailView',
-
-
-        'ArticleModel': 'models/article',
+        // 'ArticleModel' : 'models/article',
         'ArticlesCollection': 'collections/articles',
         'ArticleView': 'views/articledetails',
         'ArticleViewTpl': '../templates/articles/ArticleView.html',
         'ArticleListView': 'views/articlelist',
         'ArticleListItemView': 'views/articlelistitem',
-        'ArticleListItemViewTpl': '../templates/articles/ArticleListItemView.html',
-
-
-        'ResumeView' : 'views/ResumeView',
-        'ResumeEditView' : 'views/ResumeEditView',
-        'PhotoView' : 'views/PhotoView',
-
-        //'paginator': 'views/paginator',
-        //'WineModel': 'models/wine',
-        //'WinesCollection': 'collections/wines',
-        //'WineView': 'views/winedetails',
-        //'WineViewTpl': '../tpl/WineView.html',
-        //'WineListView': 'views/winelist',
-        //'WineListItemView': 'views/winelistitem',
-        //'WineListItemViewTpl': '../tpl/WineListItemView.html',
-        //'HomeView': 'views/home',
-        //'HomeViewTpl': '../tpl/HomeView.html',
-        //'AboutView': 'views/about',
-        //'AboutViewTpl': '../tpl/AboutView.html'
+        'ArticleListItemViewTpl': '../templates/articles/ArticleListItemView.html'
+        // 'ResumeView' : 'views/ResumeView',
+        // 'ResumeEditView' : 'views/ResumeEditView',
+        // 'PhotoView' : 'views/PhotoView'
     },
     shim: {
         'jquery': {
