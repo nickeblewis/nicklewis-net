@@ -15,9 +15,9 @@ app.configure(function () {
 
 app.get('/:collection', article.findAll);
 app.get('/:collection/:id', article.findById);
-app.post('/:collection', article.addArticle);
-app.put('/:collection/:id', article.updateArticle);
-app.delete('/:collection/:id', article.deleteArticle);
+app.post('/:collection', article.addItem);
+app.put('/:collection/:id', article.updateItem);
+app.delete('/:collection/:id', article.deleteItem);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log("Express server listening on port " + app.get('port'));

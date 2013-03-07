@@ -1,10 +1,10 @@
-//ArticleListItemView
-define(['jquery', 'underscore', 'backbone','text!ArticleListItemViewTpl'],
-    function($, _, Backbone, ArticleListItemViewTpl){
+//RoleListItemView
+define(['jquery', 'underscore', 'backbone','text!RoleListItemViewTpl'],
+    function($, _, Backbone, RoleListItemViewTpl){
 
     return Backbone.View.extend({
 
-        template: _.template(ArticleListItemViewTpl),
+        template: _.template(RoleListItemViewTpl),
         
         tagName: "li",
 

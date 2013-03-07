@@ -11,16 +11,19 @@ require.config({
         'AboutViewTpl' : '../templates/about/AboutView.html',
         'HomeView' : 'views/home',
         'AboutView' : 'views/about',
-        // 'ArticleModel' : 'models/article',
         'ArticlesCollection': 'collections/articles',
         'ArticleView': 'views/articledetails',
         'ArticleViewTpl': '../templates/articles/ArticleView.html',
         'ArticleListView': 'views/articlelist',
         'ArticleListItemView': 'views/articlelistitem',
-        'ArticleListItemViewTpl': '../templates/articles/ArticleListItemView.html'
-        // 'ResumeView' : 'views/ResumeView',
-        // 'ResumeEditView' : 'views/ResumeEditView',
-        // 'PhotoView' : 'views/PhotoView'
+        'ArticleListItemViewTpl': '../templates/articles/ArticleListItemView.html',
+        'RolesCollection': 'collections/roles',
+        'RoleView': 'views/roledetails',
+        'RoleViewTpl': '../templates/roles/RoleView.html',
+        'RoleListView': 'views/rolelist',
+        'RoleListItemView': 'views/rolelistitem',
+        'RoleListItemViewTpl': '../templates/roles/RoleListItemView.html'
+
     },
     shim: {
         'jquery': {

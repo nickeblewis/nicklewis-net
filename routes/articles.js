@@ -47,10 +47,11 @@ exports.findAll = function(req, res) {
     });
 };
 
-exports.addArticle = function(req, res) {
+exports.addItem = function(req, res) {
     var article = req.body;
-    console.log('Adding article: ' + JSON.stringify(article));
-    db.collection('articles', function(err, collection) {
+    var coll = req.params.collection;
+    console.log('Adding item: ' + JSON.stringify(article));
+    db.collection(coll, function(err, collection) {
         collection.insert(article, {safe:true}, function(err, result) {
             if (err) {
                 res.send({'error':'An error has occurred'});
@@ -62,7 +63,7 @@ exports.addArticle = function(req, res) {
     });
 }
 
-exports.updateArticle = function(req, res) {
+exports.updateItem = function(req, res) {
     var id = req.params.id;
     var article = req.body;
     var coll = req.params.collection;
@@ -82,10 +83,11 @@ exports.updateArticle = function(req, res) {
     });
 }
 
-exports.deleteArticle = function(req, res) {
+exports.deleteItem = function(req, res) {
     var id = req.params.id;
+    var coll = req.params.collection;
     console.log('Deleting article: ' + id);
-    db.collection('articles', function(err, collection) {
+    db.collection(coll, function(err, collection) {
         collection.remove({'_id':new BSON.ObjectID(id)}, {safe:true}, function(err, result) {
             if (err) {
                 res.send({'error':'An error has occurred - ' + err});

@@ -5,15 +5,22 @@ define([
         routes: {
             "index" : "home",
             "articles" : "list",
-            "resume" : "resume",
-            "resume/edit/:role" : "resumeEdit",
-            "photos" : "photos",
+            "about" : "about",
+            "cv" : "cv",
+
+            // Article based routing
             "articles/page/:page" : "list",
             "articles/add" : "addArticle",
             "articles/:id" : "articleDetails",
-            "about" : "about",
+            
 
-            // Default
+            // Role (CV) based routing
+            "roles/page/:page" : "cv",
+            "roles/add" : "addRole",
+            "roles/:id" : "roleDetails",
+
+            // Default, if all else fails, just direct the user to our home page
+            // TODO: Ideally I would like this to show a fancy 404 page ;-)
             "*actions": "home"
         },
 
@@ -60,9 +67,39 @@ define([
             });
         },
 
-        resume: function() {
+        cv: function(page) {
             var self = this;
-            require(['routes/resume'], function(htmlContent){
+            require(['routes/roles'], function(callback){
+                callback(page).done(function(htmlContent) {
+                    self.setContent(htmlContent);    
+                });                
+            });
+        },
+
+        roleDetails: function (id) {
+            var self = this;
+            // this.selectMenuItem();
+            require(['routes/addrole'], function(av){
+                av.initView(id).done(function(htmlContent){
+                    self.setContent(htmlContent);
+                });
+            });
+        },
+
+        addRole: function() {
+            var self = this;
+            // this.selectMenuItem('add-menu');
+            require(['routes/addrole'], function(av){
+                var htmlContent = av.initAdd();
+                self.setContent(htmlContent);
+            });
+        },
+
+        addArticle: function() {
+            var self = this;
+            // this.selectMenuItem('add-menu');
+            require(['routes/addView'], function(av){
+                var htmlContent = av.initAdd();
                 self.setContent(htmlContent);
             });
         },
