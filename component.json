@@ -9,6 +9,7 @@
     "bootstrap": "git://github.com/twitter/bootstrap.git",
     "foundation": "git://github.com/zurb/foundation.git",
     "moment": "git://github.com/timrwood/moment.git",
-    "handlebars" : "git://github.com/wycats/handlebars.js.git"
+    "handlebars" : "git://github.com/wycats/handlebars.js.git",
+    "font-awesome" : "git://github.com/FortAwesome/Font-Awesome.git"
   }
 }
