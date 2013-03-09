@@ -1,8 +1,9 @@
 require.config({
     paths: {
-        'jquery': 'lib/jquery-min',
-        'underscore': 'lib/underscore-min',
-        'backbone': 'lib/backbone-min',
+        'jquery': 'vendor/jquery/jquery.min',
+        'underscore': 'vendor/underscore/underscore-min',
+        'backbone': 'vendor/backbone/backbone-min',
+        'moment': 'vendor/moment/moment',
         'bootstrap': 'lib/bootstrap-min',
         'text': 'lib/text',
         'utils': 'utils',
@@ -24,7 +25,7 @@ require.config({
         'RoleListItemView': 'views/rolelistitem',
         'RoleListItemViewTpl': '../templates/roles/RoleListItemView.html'
 
-    },
+    },    
     shim: {
         'jquery': {
             exports: "$"

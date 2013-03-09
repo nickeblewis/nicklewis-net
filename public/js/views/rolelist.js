@@ -1,5 +1,6 @@
 // RoleListView
-define(['jquery', 'underscore', 'backbone', 'RoleListItemView', 'paginator'], function($, _, Backbone, RoleListItemView, Paginator){
+define(['jquery', 'underscore', 'backbone', 'RoleListItemView', 'paginator', 'moment'], 
+    function($, _, Backbone, RoleListItemView, Paginator, moment){
 
     return Backbone.View.extend({
 

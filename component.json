@@ -1,0 +1,14 @@
+{
+  "name": "nicklewis.co.uk",
+  "version": "1.0.0",  
+  "dependencies": {
+    "jquery": null,
+    "backbone-amd": null,
+    "underscore-amd": null,
+    "requirejs": null,
+    "bootstrap": "git://github.com/twitter/bootstrap.git",
+    "foundation": "git://github.com/zurb/foundation.git",
+    "moment": "git://github.com/timrwood/moment.git",
+    "handlebars" : "git://github.com/wycats/handlebars.js.git"
+  }
+}
