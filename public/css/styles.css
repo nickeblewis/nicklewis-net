@@ -162,12 +162,28 @@ background: #ce4213;
 margin:10px 0px;
 }
 
+legend {
+display: block;
+width: 100%;
+padding: 0;
+margin-bottom: 20px;
+font-size: 21px;
+line-height: 40px;
+color: #fff;
+border: 0;
+border-bottom: 1px solid #e5e5e5;
+}
+
 .form-horizontal input, .form-horizontal textarea{
 width:90%;
+background-color: #222;
+color: #fff;
+/*height: 22px;*/
 }
 
 .form-horizontal .control-label {
 width: 80px;
+font-size: 18px;
 }
 
 .form-horizontal .controls {

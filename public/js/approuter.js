@@ -6,6 +6,7 @@ define([
             "index" : "home",
             "articles" : "list",
             "about" : "about",
+            "contact" : "contact",
             "cv" : "cv",
 
             // Article based routing
@@ -107,6 +108,13 @@ define([
         about: function() {
             var self = this;
             require(['routes/about'], function(htmlContent){
+                self.setContent(htmlContent);
+            });
+        },
+
+        contact: function() {
+            var self = this;
+            require(['routes/contact'], function(htmlContent){
                 self.setContent(htmlContent);
             });
         }
