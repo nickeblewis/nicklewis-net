@@ -1,15 +1,14 @@
 {
     "name": "nicklewis-net",
     "description": "Nick Lewis Website Application",
-    "version": "0.0.1",
-    "private": true,
+    "version": "0.0.1",    
     "dependencies": {
         "express": "3.x",
         "mongodb": "1.1.8",
         "socket.io": "0.9.10"
     },
     "engines": {
-        "node": "0.8.4",
-        "npm": "1.1.x"
+        "node": ">=0.8.4",
+        "npm": ">=1.1.x"
     }
 }
