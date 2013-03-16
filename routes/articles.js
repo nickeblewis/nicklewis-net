@@ -1,4 +1,5 @@
-var mongo = require('mongodb');
+var mongo = require('mongodb'),
+    mandrill = require('node-mandrill')('AY47uaXuRNSIGcn2yI5y4A');
 
 var Server = mongo.Server,
     Db = mongo.Db,
@@ -100,8 +101,25 @@ exports.deleteItem = function(req, res) {
 }
 
 exports.sendEmail = function(req, res) {
+
     var email = req.body;
-    console.log("The email is " + email);
+
+    //send an e-mail to nick lewis
+    mandrill('/messages/send', {
+        message: {
+            to: [{email: 'nickeblewis@gmail.com', name: 'Nick Lewis'}],
+            from_email: email.email,
+            subject: "[nicklewis.co.uk] - Website enquiry from " + email.name,
+            text: email.message + ' ' + email.phone
+        }
+    }, function(error, response)
+    {
+        //uh oh, there was an error
+        if (error) console.log( JSON.stringify(error) );
+
+        //everything's good, lets see what mandrill said
+        else console.log(response);
+    });
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
