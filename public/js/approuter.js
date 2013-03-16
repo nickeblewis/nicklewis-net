@@ -14,7 +14,6 @@ define([
             "articles/add" : "addArticle",
             "articles/:id" : "articleDetails",
             
-
             // Role (CV) based routing
             "roles/page/:page" : "cv",
             "roles/add" : "addRole",
@@ -24,9 +23,7 @@ define([
             // TODO: Ideally I would like this to show a fancy 404 page ;-)
             "*actions": "home"
         },
-
         
-
         setContent: function(htmlContent) {
             $('#contentmain').html(htmlContent);
         },
@@ -114,11 +111,10 @@ define([
 
         contact: function() {
             var self = this;
-            require(['routes/contact'], function(htmlContent){
+            require(['routes/contact'], function(av){
+                var htmlContent = av.initSend();
                 self.setContent(htmlContent);
             });
-        }
-
-        
+        }        
     });    
 });

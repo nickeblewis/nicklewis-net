@@ -99,6 +99,11 @@ exports.deleteItem = function(req, res) {
     });
 }
 
+exports.sendEmail = function(req, res) {
+    var email = req.body;
+    console.log("The email is " + email);
+}
+
 /*--------------------------------------------------------------------------------------------------------------------*/
 // Populate database with sample data -- Only used once: the first time the application is started.
 // You'd typically not find this code in a real-life app, since the database would already exist.
