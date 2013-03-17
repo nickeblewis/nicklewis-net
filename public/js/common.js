@@ -4,6 +4,7 @@ require.config({
         'underscore': 'vendor/underscore/underscore-min',
         'backbone': 'vendor/backbone/backbone-min',
         'moment': 'vendor/moment/moment',
+        'etch' : 'vendor/etch/scripts/etch',
         'bootstrap': 'lib/bootstrap-min',
         'text': 'lib/text',
         'utils': 'utils',
@@ -41,6 +42,10 @@ require.config({
         },
         'bootstrap': {
             deps: ['jquery']
+        },
+        'etch' : {
+            deps: ['underscore', 'backbone', 'jquery'],
+            exports: 'etch'
         }
     }
 });

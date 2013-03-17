@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="<%= asset_path %>/docs.css" />
     <script src="<%= asset_path %>/vendor/custom.modernizr.js"></script>
   </head>
-  <body>
+  <body class="antialiased">
 
     <nav class="top-bar">
       <ul class="title-area">
@@ -109,8 +109,7 @@
     </script>
     <script src="<%= asset_path %>/docs.js"></script>
     <script>
-      $(document).foundation()
-                 .foundation('joyride', 'start');
+      $(document).foundation();
     </script>
   </body>
 </html>

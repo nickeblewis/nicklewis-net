@@ -1,0 +1,8 @@
+{
+  "name": "etch",
+  "version": "0.6.2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joshontheweb/etch.git"
+  }
+}

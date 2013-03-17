@@ -10,10 +10,10 @@
         <h4 class="subheader">Block grids give you a way to evenly split contents of a list within the grid. If you wanted to create a row of 5 images or paragraphs that need to stay evenly spaced no matter the screen size, the block grid is for you.</h4>
 
         <ul class="small-block-grid-2 large-block-grid-4">
-          <li><img src="../img/demos/demo1.jpg"></li>
-          <li><img src="../img/demos/demo2.jpg"></li>
-          <li><img src="../img/demos/demo3.jpg"></li>
-          <li><img src="../img/demos/demo4.jpg"></li>
+          <li><img class="th" src="../img/demos/demo1.jpg"></li>
+          <li><img class="th" src="../img/demos/demo2.jpg"></li>
+          <li><img class="th" src="../img/demos/demo3.jpg"></li>
+          <li><img class="th" src="../img/demos/demo4.jpg"></li>
         </ul>
 
         <hr>
@@ -57,7 +57,7 @@
         <p>We've included SCSS mixins used to style block-grids. To use the mixin, you'll need to have the <a href="../sass.html">extension installed</a> or grab <a href="https://github.com/zurb/foundation/tree/master/scss/foundation/components">_foundation-global.scss</a>, <a href="https://github.com/zurb/foundation/blob/master/scss/foundation/components/_global.scss">_global.scss</a> and <a href="https://github.com/zurb/foundation/tree/master/scss/foundation/components">_block-grid.scss</a> from Github and throw them into a foundation folder in your project directory. From there, you can import the files at the top of your own SCSS stylesheet, like so:</p>
 
 <%= code_example '
-@import "foundation/foundation-global", "foundation/block-grid";
+@import "foundation/foundation-global", "foundation/components/global", "foundation/components/block-grid";
 ', :css %>
 
         <p>If you are using the mixins, you may include the styles on whatever class or ID you'd like, just make sure you follow our markup structure. Since we don't have any media queries baked into the mixin itself, you can apply the styles at whatever breakpoint you want! Just change the configuration within each.</p>

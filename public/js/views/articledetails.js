@@ -3,13 +3,15 @@ define([
     'underscore',
     'backbone',
     'utils',
+    'etch',
     'text!ArticleViewTpl',
-    // TODO: Had to change ArticleModel below to models/article throughout the project, will need to change back
     'models/article'
-], function($, _, Backbone, utils, ArticleViewTpl, Article) {
+], function($, _, Backbone, utils, etch, ArticleViewTpl, Article) {
     return Backbone.View.extend({
         
         initialize: function () {
+            _.bindAll(this, 'save');
+            this.model.bind('save', this.save);
             this.render();
         },
 
@@ -22,10 +24,13 @@ define([
 
         events: {
             "change"        : "change",
-            "click .save"   : "beforeSave",
+            // "click .save"   : "beforeSave",
             "click .delete" : "deleteArticle",
-            "drop #picture" : "dropHandler"
+            "drop #picture" : "dropHandler",
+            "mousedown .editable" : "editableClick"
         },
+
+        editableClick: etch.editableInit,
 
         change: function (event) {
             // Remove any existing alert message
@@ -44,6 +49,13 @@ define([
             } else {
                 utils.removeValidationError(target.id);
             }
+        },
+
+        save: function() {
+            this.model.attributes.name = this.$('.name').text();
+            this.model.attributes.summary = this.$('.summary').text();
+            this.model.attributes.description = this.$('.description').text();
+            this.beforeSave();
         },
 
         beforeSave: function () {
