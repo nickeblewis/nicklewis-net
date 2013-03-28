@@ -11,6 +11,6 @@
     "moment": "git://github.com/timrwood/moment.git",
     "handlebars" : "git://github.com/wycats/handlebars.js.git",
     "font-awesome" : "git://github.com/FortAwesome/Font-Awesome.git",
-    "etch" : "git://github.com/joshontheweb/etch.git"
+    "etch" : "https://github.com/nickeblewis/etch.git"
   }
 }

@@ -1,5 +1,7 @@
 body{
 background:url('../img/back.png') repeat;
+/*background:url('../img/NIC_4699_thumb.jpg') repeat;*/
+background-attachment: fixed;
 padding-top:30px;
 font-family: 'Open Sans Condensed', sans-serif;
 color:#f4ebd2;

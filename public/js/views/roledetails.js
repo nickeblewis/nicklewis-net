@@ -3,13 +3,16 @@ define([
     'underscore',
     'backbone',
     'utils',
+    'etch',
     'text!RoleViewTpl',
     // TODO: Had to change RoleModel below to models/article throughout the project, will need to change back
     'models/role'
-], function($, _, Backbone, utils, RoleViewTpl, Role) {
+], function($, _, Backbone, utils, etch, RoleViewTpl, Role) {
     return Backbone.View.extend({
         
         initialize: function () {
+             _.bindAll(this, 'save');
+            this.model.bind('save', this.save);
             this.render();
         },
 
@@ -22,10 +25,12 @@ define([
 
         events: {
             "change"        : "change",
-            "click .save"   : "beforeSave",
             "click .delete" : "deleteRole",
-            "drop #picture" : "dropHandler"
+            "drop #picture" : "dropHandler",
+            "mousedown .editable" : "editableClick"
         },
+
+        editableClick: etch.editableInit,
 
         change: function (event) {
             // Remove any existing alert message
@@ -44,6 +49,16 @@ define([
             } else {
                 utils.removeValidationError(target.id);
             }
+        },
+
+        save: function() {
+            this.model.attributes.title = this.$('.title').text();
+            this.model.attributes.order = this.$('.order').text();
+            this.model.attributes.description = this.$('.description').text();
+            this.model.attributes.startdate = this.$('.startdate').text();
+            this.model.attributes.enddate = this.$('.enddate').text();
+            this.model.attributes.location = this.$('.location').text();
+            this.beforeSave();
         },
 
         beforeSave: function () {

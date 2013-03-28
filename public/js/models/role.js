@@ -37,11 +37,13 @@ define(['jquery','underscore', 'backbone'], function($, _, Backbone) {
 
         defaults: {
             _id: null,
-            title: "",
-            description: "",
+            title: "job title",
+            location: "Location",
+            order: 99,
+            description: "description goes here",
             skills: ["HTML","CSS"],
-            startdate: "",
-            enddate: ""
+            startdate: "start date",
+            enddate: "date finished"
         }
     });
 });
