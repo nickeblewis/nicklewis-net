@@ -3,6 +3,8 @@ define(['jquery'], function($){
 
     return {
 
+        
+
         displayValidationErrors: function (messages) {
             for (var key in messages) {
                 if (messages.hasOwnProperty(key)) {

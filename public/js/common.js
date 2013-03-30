@@ -1,33 +1,47 @@
 require.config({
     paths: {
+
+        // libs
         'jquery': 'vendor/jquery/jquery.min',
         'underscore': 'vendor/underscore/underscore-min',
         'backbone': 'vendor/backbone/backbone-min',
         'moment': 'vendor/moment/moment',
         'etch' : 'vendor/etch/scripts/etch',
+        'isotope' : 'vendor/isotope/jquery.isotope',
         'bootstrap': 'lib/bootstrap-min',
         'text': 'lib/text',
+
+        // modules
         'utils': 'utils',
         'paginator': 'views/paginator',
+
+        // templates
         'HomeViewTpl' : '../templates/HomeView.html',
         'AboutViewTpl' : '../templates/AboutView.html',
         'ContactViewTpl' : '../templates/ContactView.html',
+        'ArticleViewTpl': '../templates/ArticleView.html',
+        'ArticleListItemViewTpl': '../templates/ArticleListItemView.html',
+        'PortfolioListItemViewTpl': '../templates/PortfolioListItemView.html',
+        'RoleViewTpl': '../templates/RoleView.html',
+        'RoleListItemViewTpl': '../templates/RoleListItemView.html',
+
+        // views
         'HomeView' : 'views/home',
         'AboutView' : 'views/about',
         'ContactView' : 'views/contact',
-        'ArticlesCollection': 'collections/articles',
         'ArticleView': 'views/articledetails',
-        'ArticleViewTpl': '../templates/ArticleView.html',
         'ArticleListView': 'views/articlelist',
+        'PortfolioListView': 'views/portfoliolist',
         'ArticleListItemView': 'views/articlelistitem',
-        'ArticleListItemViewTpl': '../templates/ArticleListItemView.html',
-        'RolesCollection': 'collections/roles',
+        'PortfolioListItemView': 'views/portfoliolistitem',
         'RoleView': 'views/roledetails',
-        'RoleViewTpl': '../templates/RoleView.html',
         'RoleListView': 'views/rolelist',
         'RoleListItemView': 'views/rolelistitem',
-        'RoleListItemViewTpl': '../templates/RoleListItemView.html'
 
+        // collections
+        'ArticlesCollection': 'collections/articles',
+        'RolesCollection': 'collections/roles',
+        'PortfolioCollection': 'collections/portfolio',
     },    
     shim: {
         'jquery': {
@@ -46,6 +60,10 @@ require.config({
         'etch' : {
             deps: ['underscore', 'backbone', 'jquery'],
             exports: 'etch'
+        },
+        'isotope' : {
+            deps: ['underscore', 'backbone', 'jquery'],
+            exports: 'isotope'
         }
     }
 });
@@ -53,6 +71,7 @@ require.config({
 require(['jquery', 'underscore', 'backbone', 'approuter', 'bootstrap'], function($, _, Backbone, AppRouter){
     $(function(){
         window.app = new AppRouter();
+        
         Backbone.history.start();
     });
 });

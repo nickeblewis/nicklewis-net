@@ -19,6 +19,9 @@ define([
             "cv/add" : "addRole",
             "cv/:id" : "roleDetails",
 
+            // Portfolio items
+            "portfolio" : "portfolio",
+
             // Default, if all else fails, just direct the user to our home page
             // TODO: Ideally I would like this to show a fancy 404 page ;-)
             "*actions": "home"
@@ -71,6 +74,15 @@ define([
                 callback(page).done(function(htmlContent) {
                     self.setContent(htmlContent);    
                 });                
+            });
+        },
+
+        portfolio: function(page) {
+            var self = this;
+            require(['routes/portfolio'], function(callback){
+                callback(page).done(function(htmlContent) {
+                    self.setContent(htmlContent);
+                });
             });
         },
 
