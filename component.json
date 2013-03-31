@@ -12,6 +12,7 @@
     "handlebars" : "git://github.com/wycats/handlebars.js.git",
     "font-awesome" : "git://github.com/FortAwesome/Font-Awesome.git",
     "etch" : "https://github.com/nickeblewis/etch.git",
-    "isotope": "git://github.com/desandro/isotope.git"
+    "isotope": "git://github.com/desandro/isotope.git",
+    "fancybox": "git://github.com/fancyapps/fancyBox.git"
   }
 }
