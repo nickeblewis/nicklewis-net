@@ -21,6 +21,7 @@ define([
 
             // Portfolio items
             "portfolio" : "portfolio",
+            "portfolio/:id" : "portfolioItem",            
 
             // Default, if all else fails, just direct the user to our home page
             // TODO: Ideally I would like this to show a fancy 404 page ;-)
@@ -84,6 +85,16 @@ define([
                     self.setContent(htmlContent);
                 });
             });
+        },
+
+        portfolioItem: function(id) {
+           var self = this;
+            // this.selectMenuItem();
+            require(['routes/portfolioitem'], function(av){
+                av.initView(id).done(function(htmlContent){
+                    self.setContent(htmlContent);
+                });
+            }); 
         },
 
         roleDetails: function (id) {

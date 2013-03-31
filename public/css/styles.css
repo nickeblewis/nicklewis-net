@@ -813,3 +813,23 @@ box-shadow:0px 0px 2px #333;
   top: 10px;
   left: 50px;
 }
+
+.cell {
+  background-color: #333;
+  margin: 3px;
+  width: 220px;
+}
+
+.cell h4 {
+  font-size: 18px;
+  line-height: 20px;
+  padding-left: 4px;
+}
+
+.cell p {
+  font-size: 16px;
+  color: #aaa;
+  line-height: 16px;
+    padding-left: 4px;
+
+}

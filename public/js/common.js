@@ -10,6 +10,7 @@ require.config({
         'isotope' : 'vendor/isotope/jquery.isotope',
         'bootstrap': 'lib/bootstrap-min',
         'text': 'lib/text',
+        'fancybox': 'vendor/fancybox/source/jquery.fancybox.pack',
 
         // modules
         'utils': 'utils',
@@ -24,12 +25,14 @@ require.config({
         'PortfolioListItemViewTpl': '../templates/PortfolioListItemView.html',
         'RoleViewTpl': '../templates/RoleView.html',
         'RoleListItemViewTpl': '../templates/RoleListItemView.html',
+        'PortfolioViewTpl': '../templates/PortfolioView.html',
 
         // views
         'HomeView' : 'views/home',
         'AboutView' : 'views/about',
         'ContactView' : 'views/contact',
         'ArticleView': 'views/articledetails',
+        'PortfolioView': 'views/portfoliodetails',
         'ArticleListView': 'views/articlelist',
         'PortfolioListView': 'views/portfoliolist',
         'ArticleListItemView': 'views/articlelistitem',

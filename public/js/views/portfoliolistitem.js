@@ -18,19 +18,7 @@ define(['jquery', 'underscore', 'backbone','text!PortfolioListItemViewTpl','isot
 
         render: function () {
 
-            $(this.el).html(this.template(this.model.toJSON()));
-
-            // $(this.el).isotope(
-            //                 {
-            //                     itemSelector: '.item',
-            //                     resizable: false,
-            //                     masonry: { columnWidth: 1 },
-            //                     containerStyle: {
-            //                         position: 'relative',
-            //                         zIndex: 1
-            //                     }
-            //                 }
-            //             );
+        $(this.el).html(this.template(this.model.toJSON()));
             return this;
         }
     });
