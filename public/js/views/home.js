@@ -21,25 +21,25 @@ define([
     },
 
     events: {
-      "click .design" : "designClick",
-      "click .photos" : "photosClick",
-      "click .code" : "codeClick",
-      "click .writing" : "writingClick"
+      "hover .design" : "designHover",
+      "hover .photos" : "photosHover",
+      "hover .code" : "codeHover",
+      "hover .writing" : "writingHover"
     },
 
-    designClick: function() {
-      $('#detailbox').text('Design is nice');
+    designHover: function() {
+      $('#detailbox').text('Design is not just about making a website nice on the eye, it is also about making it tick!');
     },
-    photosClick: function() {
-            $('#detailbox').text('Love the photography');
+    photosHover: function() {
+            $('#detailbox').text('Photography is in the heart and soul, good photography helps provide a narrative.');
 
     },
-    codeClick: function() {
-            $('#detailbox').text('Coding cool');
+    codeHover: function() {
+            $('#detailbox').text('Code, mostly Javascript here is what drives us, not just the sites we build!');
 
     },
-    writingClick: function() {
-            $('#detailbox').text('Love a bit of writing');
+    writingHover: function() {
+            $('#detailbox').text('Words are invaluable and as you can tell we love gorgeous typography too!');
 
     }
   });
