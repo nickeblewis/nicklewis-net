@@ -1,7 +1,9 @@
 // ArticleListView
-define(['jquery', 'underscore', 'backbone', 'isotope', 'utils', 'PortfolioListItemView', 'paginator'], function($, _, Backbone, Isotope,  utils, PortfolioListItemView, Paginator){
+define(['jquery', 'underscore', 'backbone', 'isotope', 'utils', 'PortfolioListItemView', 'paginator','text!PortfolioContainerViewTpl'], function($, _, Backbone, Isotope,  utils, PortfolioListItemView, Paginator,PortfolioContainerViewTpl){
 
     return Backbone.View.extend({
+
+        template: _.template(PortfolioContainerViewTpl),
 
         initialize: function () {
             this.render();
@@ -13,14 +15,18 @@ define(['jquery', 'underscore', 'backbone', 'isotope', 'utils', 'PortfolioListIt
             var startPos = (this.options.page - 1) * 50;
             var endPos = Math.min(startPos + 50, len);
 
-            $(this.el).html('<div id="photos"></div>');
+            $(this.el).html(this.template());
 
             for (var i = startPos; i < endPos; i++) {
                 $('#photos', this.el).append(new PortfolioListItemView({model: portfolio[i]}).render().el);
             }
             
             var _this = this;
-            setTimeout(function() { _this.$el.isotope({ itemSelector: '.element' })},0);
+            setTimeout(function() { _this.$el.isotope({ 
+                itemSelector: '.element', 
+                fitColumn: true
+                 
+            })},0);
 
   
             return this;

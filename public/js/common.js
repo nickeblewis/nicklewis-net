@@ -26,6 +26,7 @@ require.config({
         'RoleViewTpl': '../templates/RoleView.html',
         'RoleListItemViewTpl': '../templates/RoleListItemView.html',
         'PortfolioViewTpl': '../templates/PortfolioView.html',
+        'PortfolioContainerViewTpl': '../templates/PortfolioContainerView.html',
 
         // views
         'HomeView' : 'views/home',
