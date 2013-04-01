@@ -19,7 +19,6 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
             return (this.validators[key]) ? this.validators[key](this.get(key)) : {isValid: true};
         },
 
-        // TODO: Implement Backbone's standard validate() method instead.
         validateAll: function () {
 
             var messages = {};

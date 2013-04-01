@@ -11,7 +11,6 @@ define(['underscore', 'backbone'], function(_, Backbone) {
             
             currently: 'Contracting for Avvio Ltd nr. Henley-on-Thames. However this has just come to an end, so now putting my marketing hat on for the coming week to look for new projects to jump on. Now is the time to call me!',
             
-            // TODO: Make an array of objects with either links to external pages or other routes within this site
             projects: [
                 'Journog',
                 'Farnborough Guide',
@@ -20,7 +19,6 @@ define(['underscore', 'backbone'], function(_, Backbone) {
                 'Newington Village Hall'
                 ],
 
-            // TODO: Photography section needs some thought, especially on image storage                
             looking: 'I provide freelance or contract services to businesses and you may read up more on this under my resume pages',
             coding: 'If you are interested in coding yourself, then you may be interested to know that this site was developed using BackboneJS, NodeJS/Express, Twitter Bootstrap, MongoDB and we host this site on Heroku. Cool hey?'
         }
