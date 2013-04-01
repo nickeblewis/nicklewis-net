@@ -1,9 +1,8 @@
-Nick Lewis Website based on Nodecellar and being adapted to form my own website, that will evolve over time with lots of Javascript framework goodness, backed by NodeJs!
+My website is a constant work in progress, there are features that are not ready for production yet and eventually I will be making this project available for other sites, as a kind of highly advanced bootstrap!
 
-* Articles, to be a kind of blog 
-* Resume, a way of adding jobs to my online CV
-* Photos
-* Github links
-* What else?
-* This is clever!
-* Awesome
+* About
+* Portfolio
+* CV
+* Blog (articles)
+
+What else? Lots more on my head, but should write it up here really
