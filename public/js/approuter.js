@@ -8,20 +8,22 @@ define([
             "about" : "about",
             "contact" : "contact",
             "cv" : "cv",
-
-            // Article based routing
-            "articles/page/:page" : "list",
-            "articles/add" : "addArticle",
-            "articles/:id" : "articleDetails",
-            
-            // Role (CV) based routing
-            "cv/page/:page" : "cv",
-            "cv/add" : "addRole",
-            "cv/:id" : "roleDetails",
-
+           
             // Portfolio items
             "portfolio" : "portfolio",
             "portfolio/:id" : "portfolioItem",            
+
+            // List stuff
+            "articles/page/:page" : "list",
+
+            // Show details
+            "articles/:id" : "articleDetails",
+            "cv/page/:page" : "cv",
+            "cv/:id" : "roleDetails",
+
+            // Add new things - NOTE: Have disabled these for the moment
+            "articles/add" : "addArticle",
+            "cv/add" : "addRole",
 
             // Default, if all else fails, just direct the user to our home page
             // TODO: Ideally I would like this to show a fancy 404 page ;-)
@@ -107,23 +109,24 @@ define([
             });
         },
 
-        addRole: function() {
-            var self = this;
-            // this.selectMenuItem('add-menu');
-            require(['routes/role'], function(av){
-                var htmlContent = av.initAdd();
-                self.setContent(htmlContent);
-            });
-        },
+        // NOTE - Taken the ability to add new items out for now, as I am going to
+        // addRole: function() {
+        //     var self = this;
+        //     // this.selectMenuItem('add-menu');
+        //     require(['routes/role'], function(av){
+        //         var htmlContent = av.initAdd();
+        //         self.setContent(htmlContent);
+        //     });
+        // },
 
-        addArticle: function() {
-            var self = this;
-            // this.selectMenuItem('add-menu');
-            require(['routes/article'], function(av){
-                var htmlContent = av.initAdd();
-                self.setContent(htmlContent);
-            });
-        },
+        // addArticle: function() {
+        //     var self = this;
+        //     // this.selectMenuItem('add-menu');
+        //     require(['routes/article'], function(av){
+        //         var htmlContent = av.initAdd();
+        //         self.setContent(htmlContent);
+        //     });
+        // },
 
         about: function() {
             var self = this;

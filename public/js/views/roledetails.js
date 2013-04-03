@@ -26,8 +26,8 @@ define([
         events: {
             "change"        : "change",
             "click .delete" : "deleteRole",
-            "drop #picture" : "dropHandler",
-            "mousedown .editable" : "editableClick"
+            "drop #picture" : "dropHandler"
+            // "mousedown .editable" : "editableClick"
         },
 
         editableClick: etch.editableInit,

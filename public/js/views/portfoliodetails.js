@@ -26,8 +26,8 @@ define([
             "change"        : "change",
             // "click .save"   : "beforeSave",
             "click .delete" : "deletePortfolio",
-            "drop #picture" : "dropHandler",
-            "mousedown .editable" : "editableClick"
+            "drop #picture" : "dropHandler"
+            // "mousedown .editable" : "editableClick"
         },
 
         editableClick: etch.editableInit,

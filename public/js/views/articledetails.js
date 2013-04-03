@@ -26,8 +26,10 @@ define([
             "change"        : "change",
             // "click .save"   : "beforeSave",
             "click .delete" : "deleteArticle",
-            "drop #picture" : "dropHandler",
-            "mousedown .editable" : "editableClick"
+            "drop #picture" : "dropHandler"
+
+            // NOTE - Disabling the edit features for the moment, all editing via MongoDB for now
+            // "mousedown .editable" : "editableClick"
         },
 
         editableClick: etch.editableInit,
