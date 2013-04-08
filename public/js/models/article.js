@@ -40,6 +40,7 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
             name: "",
             summary: "",
             description: "",
+            text: [],
             picture: null
         }
     });
