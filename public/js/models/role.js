@@ -40,6 +40,7 @@ define(['jquery','underscore', 'backbone'], function($, _, Backbone) {
             location: "Location",
             order: 99,
             description: "description goes here",
+            points: [],
             skills: ["HTML","CSS"],
             startdate: "start date",
             enddate: "date finished"

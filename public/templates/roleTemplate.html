@@ -9,10 +9,11 @@
 					
 			    	<div class="span12">
 			    		<!-- <blockquote><span class="bqstart">&#8220;</span><%= role.get('description') %> <a href="#roles/<%= role.get('_id') %>">Read more...</a><span class="bqend">&#8221;</span></blockquote> -->
-			    		<p><%= role.get('description') %></p>
 			    		<% _.each(role.get('skills'), function(skill) { %>
 							<span class="skillpill"><%=skill%></span>
 		    			<% });%>
+			    		<p><%= role.get('description') %></p>
+			    		
 			    	</div>  
 		    		    		   	
 	    	</div>

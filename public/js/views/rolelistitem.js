@@ -14,7 +14,7 @@ define(['jquery', 'underscore', 'backbone','text!RoleListItemViewTpl', 'moment']
     return Backbone.View.extend({
 
         template: _.template(RoleListItemViewTpl),
-        tagName: "li",
+        tagName: "div",
 
         initialize: function () {
             this.model.bind("change", this.render, this);
