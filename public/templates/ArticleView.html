@@ -84,6 +84,13 @@
     <h4><%= summary %></h4>
 </div>
 
-<div id="article-description" class="description editable" data-button-class="all">
+<!-- <div id="article-description" class="description editable" data-button-class="all">
     <p><%= description %></p>
+</div> -->
+
+<div id="article-description" class="description editable" data-button-class="all">
+    <% _.each(text, function(item) { %>
+        <p><%=item%></p>
+    <% }); %>
+   
 </div>
