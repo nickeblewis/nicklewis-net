@@ -135,12 +135,17 @@ ul{
 list-style-type:none;
 margin-left:0px;
 margin:10px 0px 10px 0px;
+
 }
 
 ul li{
 padding:3px 0px;
-margin:3px 0px;
+margin:5px 0px;
 line-height:30px;
+background-color: #222;
+padding: 20px;
+border-left: 1px solid orange;
+
 }
 
 a:active, a:focus { 
@@ -820,18 +825,20 @@ margin-top: 40px;*/
   background-color: #333;
   margin: 2px;
   width: 190px;
+  padding-bottom: 10px;
 }
 
 .cell h4 {
   font-size: 18px;
   line-height: 20px;
   padding-left: 4px;
+  
 }
 
 .cell p {
-  font-size: 16px;
+  font-size: 18px;
   color: #aaa;
-  line-height: 16px;
+  line-height: 18px;
     padding-left: 4px;
 
 }
