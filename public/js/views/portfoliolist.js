@@ -26,7 +26,7 @@ define(['jquery', 'underscore', 'backbone', 'isotope', 'utils', 'PortfolioListIt
                 itemSelector: '.element', 
                 fitColumn: true
                  
-            })},0);
+            })},100);
 
   
             return this;
