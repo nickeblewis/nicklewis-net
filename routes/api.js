@@ -12,6 +12,7 @@ db = new Db('nicklewis', server);
 db.open(function(err, db) {
     if(!err) {
         console.log("Connected to 'nicklewis' database");
+        // TODO - This would be better as an ENV variable to hide the thing
         db.authenticate('nickeblewis', 'whateveryourpasswdis!', function(err, result) {
             //  console.log(err);
             // console.log(result);
