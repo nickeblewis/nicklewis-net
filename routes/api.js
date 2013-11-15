@@ -12,7 +12,7 @@ db = new Db('nicklewis', server);
 db.open(function(err, db) {
     if(!err) {
         console.log("Connected to 'nicklewis' database");
-        db.authenticate('nickeblewis', 'Algarve2012', function(err, result) {
+        db.authenticate('nickeblewis', 'whateveryourpasswdis!', function(err, result) {
             //  console.log(err);
             // console.log(result);
         });
