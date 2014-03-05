@@ -874,3 +874,7 @@ margin-bottom: 0.2em;
 section {
   display: block;
 }
+
+.element img {
+  width: 100%;
+}
